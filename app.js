@@ -7,6 +7,9 @@ const db = require('./utils/database');
 //Import modelo Users que se creo
 const Users = require('./models/users.model');
 
+//import cors
+const cors = require('cors');
+
 //importacion de dotenv variable de entorno
 require('dotenv').config();
 
@@ -35,6 +38,7 @@ const app = express();
 
 //creacion de este middleware convertir a objeto o arrays de informacion que nos envian por el body de una petición
 app.use(express.json());
+app.use(cors());
 
 //************** CRUD ***************/
 //! *********** CREATE **************/
